@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "assamportal",
+    "username": "jobportal",
+    "password": "raKE73@$",
+    "database": "assamjobportal",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

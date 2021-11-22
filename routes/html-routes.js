@@ -37,6 +37,12 @@ module.exports = function(app) {
     res.render("signup");
   });
 
+  app.get("*", (req, res)=>{
+    res.render('404page',{
+      errorMsg: "404 Not Found"
+    })
+  })
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
 
