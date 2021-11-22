@@ -1,0 +1,147 @@
+<div id="jobSearchPageId"></div>
+<div id="jobList">
+  <div class="container mb-3">
+    <h1>
+      <center style="color:#17a2b8">Assam Job Portal</center>
+    </h1>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <div class="qsb-header-text">
+          <h4 class="inline">Find A Job at Assam's No.1 Job Site</h4>
+        </div>
+        <form class="input-group mb-3" id="searchForm">
+          <input type="text" class="form-control" id="searchInput"
+            placeholder="Search role, technology, company or job location..">
+          <select id="district" data-dropdown>
+            <option value="">জিলা নিৰ্বাচন কৰক (District)</option>
+            <option value="">All</option>
+            <option value="baksa">Baksa</option>
+            <option value="barpeta">Barpeta</option>
+            <option value="biswanath">Biswanath</option>
+            <option value="bongaigaon">Bongaigaon</option>
+            <option value="cachar">Cachar</option>
+            <option value="charaideo">Charaideo</option>
+            <option value="chirang">Chirang</option>
+            <option value="darrang">Darrang</option>
+            <option value="dhemaji">Dhemaji</option>
+            <option value="dhubri">Dhubri</option>
+            <option value="dibrugarh">Dibrugarh</option>
+            <option value="dima-hasao">Dima Hasao</option>
+            <option value="goalpara">Goalpara</option>
+            <option value="golaghat">Golaghat</option>
+            <option value="hailakandi">Hailakandi</option>
+            <option value="hojai">Hojai</option>
+            <option value="jorhat">Jorhat</option>
+            <option value="kamrup">Kamrup</option>
+            <option value="kamrup-metropolitan">Kamrup Metropolitan</option>
+            <option value="karbi-anglong">Karbi Anglong</option>
+            <option value="karimganj">Karimganj</option>
+            <option value="kokrajhar">Kokrajhar</option>
+            <option value="lakhimpur">Lakhimpur</option>
+            <option value="majuli">Majuli</option>
+            <option value="morigaon">Morigaon</option>
+            <option value="nagaon">Nagaon</option>
+            <option value="nalbari">Nalbari</option>
+            <option value="sivasagar">Sivasagar</option>
+            <option value="sonitpur">Sonitpur</option>
+            <option value="south-salamara-mankachar">South Salamara Mankachar</option>
+            <option value="tinsukia">Tinsukia</option>
+            <option value="udalguri">Udalguri</option>
+            <option value="west-karbi-anglong">West Karbi Anglong</option>
+            <option value="other">Other</option>
+          </select>
+          <select id="jobcategory" name="jobcategory" data-dropdown>
+            <option value="">চাকৰিৰ শ্ৰেণী (Job Category)</option>
+            <option value="data-entry">Data Entry</option>
+            <option value="marketing">Marketing</option>
+            <option value="telecaller">Telecaller </option>
+            <option value="driver">Driver</option>
+            <option value="office-assistant">Office Assistant</option>
+            <option value="delivery">Delivery</option>
+            <option value="teacher">Teacher</option>
+            <option value="cook">Cook</option>
+            <option value="Receptionist">Receptionist</option>
+            <option value="operator-technician">Operator Technician</option>
+            <option value="it-engineer">IT Engineer</option>
+            <option value="developer">Developer</option>
+            <option value="app-developer">App Developer</option>
+            <option value="web-developer">Web Developer</option>
+            <option value="hotel-executive">Hotel Executive</option>
+            <option value="travel-executive">Travel Executive</option>
+            <option value="accountant">Accountant</option>
+            <option value="designer">Designer</option>
+            <option value="security">Security</option>
+            <option value="sales-assistant">Sales Assistant</option>
+            <option value="video-editor">Video Editor</option>
+            <option value="writer">Writer</option>
+            <option value="events-manager">Events Manager</option>
+            <option value="market-research-executive">Market Research Executive</option>
+            <option value="seo-specialist">SEO Specialist</option>
+            <option value="dancer">Dancer</option>
+            <option value="sound-sesigner">Sound Designer</option>
+            <option value="packaging-operative">Packaging Operative</option>
+            <option value="advocate-clerk">Advocate Clerk</option>
+            <option value="advocate">Advocate</option>
+            <option value="tourist-guide">Tourist Guide</option>
+            <option value="housekeeping-assistant">Housekeeping Assistant</option>
+            <option value="Chef">Chef</option>
+            <option value="investment-analyst">Investment Analyst</option>
+            <option value="accounts-assistant">Accounts Assistant</option>
+            <option value="cleaner">Cleaner</option>
+            <option value="electrician">Electrician</option>
+            <option value="teacher">Teacher</option>
+            <option value="animator">Animator</option>
+            <option value="photographer">Photographer</option>
+            <option value="user-experience-designer">User Experience Designer</option>
+            <option value="product-designer">Product Designer</option>
+            <option value="textile-designer">Textile Designer</option>
+            <option value="interior-designer">Interior Designer</option>
+            <option value="graphic-designer"> Graphic Designer</option>
+            <option value="road-worker">Road Worker</option>
+            <option value="plumber">Plumber</option>
+            <option value="painter">Painter</option>
+            <option value="software-engineer">Software Engineer</option>
+            <option value="software-developer">Software Developer</option>
+            <option value="games-developer">Games Developer</option>
+            <option value="computer-repair">Computer Repair</option>
+            <option value="it-support-technician">IT Support Technician</option>
+            <option value="Helpdesk-professional">Helpdesk Professional</option>
+            <option value="Network-manager">Network manager</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="legal-secretary">Legal Secretary</option>
+            <option value="personal-assistant">Personal Assistant</option>
+            <option value="construction-builders">Construction Builder</option>
+            <option value="labour">Labour Work</option>
+            <option value="assistant">Assistant</option>
+            <option value="shop-assistant">Shop Assistant</option>
+            <option value="other">Other</option>
+          </select>
+          <button type="submit" value="Search" id="searchJob"
+            class="MuiButtonBase-root MuiButton-root jss122 MuiButton-contained MuiButton-containedPrimary">Tab
+            Search</button>
+          <div id="loader" style="margin-top:10px; display:none;">
+            <img src="/static/ajax-loader.gif">
+          </div>
+        </form>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <div class="row mr-2 ml-2" id="jobs">
+      <div class="col-md-2"> </div>
+      <div class="col-md-8 col-lg-8 align-items-center">
+        {{>govtjob}}
+        {{#each job}}
+        {{>jobsfinder}}
+        {{/each}}
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+<script src="/js/jobsearch.js"></script>

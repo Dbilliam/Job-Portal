@@ -1,0 +1,23 @@
+<div class="card shadow rounded" style=" background-color: #ffffff; text-white greenborder mb-4">
+  <div class="card-body">
+    <div class="row">
+      <h4 class="ml-3">{{this.role}}</h4>
+      <p class="ml-3"><span class="text-info">{{jobtype}}</span></p>
+      <p class="ml-3"><span class="text-info">{{jobcategory}}</span></p>
+    </div>
+    <p class="mb-1">Publish Date: <span>{{this.createdAt}}</span></p>
+    <p class="mb-1" style="color:#ac1616" ><strong><i class="fa-solid fa-briefcase"></i> {{this.company}}</strong></p>
+    <p class="mb-1">Description : <span class="text-info">{{this.description}}</span></p>
+    <p class="mb-1">Job Location : <span class="text-info">{{this.joblocation}}</span></p>
+    <p class="mb-1">District : <span class="text-info">{{this.district}}</span></p>
+    <p class="mb-1">Salary : <span class="text-info">₹{{this.salary}}</span></p>
+    <div class="tech">
+      <p class="mb-1">Educational Qualification: <span class="text-info">{{this.technology}}</span></p>
+    </div>
+    <div>
+      <a href="tel:{{this.phonenum}}" style="color:#1ac8c0"><i class="fa-solid  fa-phone"></i>&nbspCall</a>&nbsp
+      <a href="mailto:{{this.contact}}" style="color:#1ac8c0"><i class="fa-solid fa-envelope"></i>&nbspContact</a>&nbsp
+      <a href="{{this.dataValues.url}}" style="color:#1ac8c0"><i class="fa-regular fa-file-lines "></i>&nbspApply Now</a>&nbsp
+    </div>
+  </div>
+</div>

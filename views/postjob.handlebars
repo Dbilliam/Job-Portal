@@ -1,0 +1,227 @@
+<div id="loading"></div>
+<div class="jss4"><img src="/static/Assam_Job_Portal.jpg" class="jss3"></div>
+
+<br>
+
+<section id="postjob" class="container">
+  <div class="row mr-2 ml-2">
+    <div class="card shadow rounded col-sm-11" style="margin:auto;padding:auto;">
+      <div class="card-body">
+        <div class="form-wrap">
+          <br>
+          <h2 class="text-center">Post A Job</h2>
+          <br>
+
+          {{#each errors}}
+          <div class="error">
+            <p>{{text}}</p>
+          </div>
+          {{/each}}
+
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+              <p id="err" style="color:red;font-style:italic;"></p>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+
+          <br>
+          
+          <form action="/api/postjob" method="POST">
+            <div class="input-group mb-3 row">
+              <label for="role" class="col-sm-3" style="font-size:large;">Job Role</label>
+              <input type="text" name="role" id="role" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Front end developer Recruitment,4 Software developer Vacancy Recruitment (required)" maxlength="200"
+                value={{role}}>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="description" class="col-sm-3" style="font-size:large;">Description</label>
+              <textarea name="description" id="description" class="form-control col-sm-9 ml-2 rounded" rows="5"
+                placeholder="Job Description here (required)" maxlength="1000" value={{description}}></textarea>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="technology" class="col-sm-3" style="font-size:large;">Educational Qualification</label>
+              <input type="text" name="technology" id="technology" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="eg. 10th, 12th, BA, BCOM, BCA (required)" maxlength="200" value={{technology}}>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="company" class="col-sm-3" style="font-size:large;">Business</label>
+              <input type="text" name="company" id="company" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter business Or Company Or Organisation name here (required)" value={{company}}>
+            </div>
+
+            <div class="dropdown mb-3 row">
+              <label for="jobtype" class="col-sm-3" style="font-size:large;">Job Type:</label>
+              <select id="jobtype" name="jobtype" class="col-sm-3 ml-2 rounded" value={{jobtype}}>
+                <option>Select Job Type</option>
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="contract">Contract</option>
+              </select>
+            </div>
+            <div class="dropdown mb-3 row">
+              <label for="jobcategory" class="col-sm-3" style="font-size:large;">Job Category:</label>
+              <select id="jobcategory" name="jobcategory" class="col-sm-3 ml-2 rounded" value={{jobcategory}}>
+                <option>Select Job Category</option>
+                <option value="data-entry">Data Entry</option>
+                <option value="marketing">Marketing</option>
+                <option value="telecaller">Telecaller</option>
+                <option value="driver">Driver</option>
+                <option value="office-assistant">Office Assistant</option>
+                <option value="delivery">Delivery</option>
+                <option value="teacher">Teacher</option>
+                <option value="cook">Cook</option>
+                <option value="receptionist">Receptionist</option>
+                <option value="operator-technician">Operator Technician</option>
+                <option value="it-engineer">IT Engineer</option>
+                <option value="developer">Developer</option>
+                <option value="app-developer">App Developer</option>
+                <option value="web-developer">Web Developer</option>
+                <option value="hotel-executive">Hotel Executive</option>
+                <option value="travel-executive">Travel Executive</option>
+                <option value="accountant">Accountant</option>
+                <option value="designer">Designer</option>
+                <option value="security">Security</option>
+                <option value="sales-assistant">Sales Assistant</option>
+                <option value="video-editor">Video Editor</option>
+                <option value="Writer">Writer</option>
+                <option value="events-manager">Events Manager</option>
+                <option value="executive">Executive</option>
+                <option value="seo-specialist">SEO Specialist</option>
+                <option value="dancer">Dancer</option>
+                <option value="sound-designer">Sound Designer</option>
+                <option value="packaging-operative">Packaging Operative</option>
+                <option value="advocate-clerk">Advocate Clerk</option>
+                <option value="advocate">Advocate</option>
+                <option value="tourist-guide">Tourist Guide</option>
+                <option value="housekeeping-assistant">Housekeeping Assistant</option>
+                <option value="chef">Chef</option>
+                <option value="investment-analyst">Investment Analyst</option>
+                <option value="accounts-assistant">Accounts Assistant</option>
+                <option value="cleaner">Cleaner</option>
+                <option value="electrician">Electrician</option>
+                <option value="teacher">Teacher</option>
+                <option value="animator">Animator</option>
+                <option value="photographer">Photographer</option>
+                <option value="user-experience-designer">User Experience Designer</option>
+                <option value="product-designer">Product Designer</option>
+                <option value="textile-designer">Textile Designer</option>
+                <option value="interior-designer">Interior Designer</option>
+                <option value="graphic-designer"> Graphic Designer</option>
+                <option value="road-worker">Road Worker</option>
+                <option value="plumber">Plumber</option>
+                <option value="painter">Painter</option>
+                <option value="software-engineer">Software Engineer</option>
+                <option value="software-developer">Software Developer</option>
+                <option value="games-developer">Games Developer</option>
+                <option value="computer-repair">Computer Repair</option>
+                <option value="it-support-technician">IT Support Technician</option>
+                <option value="helpdesk-professional">Helpdesk Professional</option>
+                <option value="manager">Manager</option>
+                <option value="receptionist">Receptionist</option>
+                <option value="legal-secretary">Legal Secretary</option>
+                <option value="personal-assistant">Personal Assistant</option>
+                <option value="construction-builders">Construction Builder</option>
+                <option value="labour">Labour Work</option>
+                <option value="assistant">Assistant</option>
+                <option value="shop-assistant">Shop Assistant</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="dropdown mb-3 row">
+              <label for="district" class="col-sm-3" style="font-size:large;">District :</label>
+              <select id="district" name="district" class="col-sm-3 ml-2 rounded" value={{district}}>
+                <option>Select District</option>
+                <option value="baksa">Baksa</option>
+                <option value="barpeta">Barpeta</option>
+                <option value="biswanath">Biswanath</option>
+                <option value="bongaigaon">Bongaigaon</option>
+                <option value="cachar">Cachar</option>
+                <option value="charaideo">Charaideo</option>
+                <option value="chirang">Chirang</option>
+                <option value="darrang">Darrang</option>
+                <option value="dhemaji">Dhemaji</option>
+                <option value="dhubri">Dhubri</option>
+                <option value="dibrugarh">Dibrugarh</option>
+                <option value="dima Hasao">Dima Hasao</option>
+                <option value="goalpara">Goalpara</option>
+                <option value="golaghat">Golaghat</option>
+                <option value="hailakandi">Hailakandi</option>
+                <option value="hojai">Hojai</option>
+                <option value="jorhat">Jorhat</option>
+                <option value="kamrup">Kamrup</option>
+                <option value="kamrup-metropolitan">Kamrup Metropolitan</option>
+                <option value="karbi-anglong">Karbi Anglong</option>
+                <option value="karimganj">Karimganj</option>
+                <option value="kokrajhar">Kokrajhar</option>
+                <option value="lakhimpur">Lakhimpur</option>
+                <option value="majuli">Majuli</option>
+                <option value="morigaon">Morigaon</option>
+                <option value="nagaon">Nagaon</option>
+                <option value="nalbari">Nalbari</option>
+                <option value="sivasagar">Sivasagar</option>
+                <option value="sonitpur">Sonitpur</option>
+                <option value="south-salamara-mankachar">South Salamara Mankachar</option>
+                <option value="tinsukia">Tinsukia</option>
+                <option value="udalguri">Udalguri</option>
+                <option value="west-karbi-anglong">West Karbi Anglong</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="salary" class="col-sm-3" style="font-size:large;">Salary</label>
+              <input type="salary" name="salary" id="salary" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter salary (required)" value={{salary}}>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-6 text-center">
+                <p id="salaryErr" style="color:red;font-style:italic;"></p>
+              </div>
+              <div class="col-md-3s"></div>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="joblocation" class="col-sm-3" style="font-size:large;">Job Location</label>
+              <input type="joblocation" name="joblocation" id="joblocation" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter Job location (required)" value={{joblocation}}>
+            </div>
+            <div class="input-group mb-3 row">
+              <label for="phonenum" class="col-sm-3" style="font-size:large;">Contact Phone</label>
+              <input type="phonenum" name="phonenum" id="phonenum" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter an Phone" value={{phonenum}}>
+            </div>
+
+            <div class="input-group mb-3 row">
+              <label for="contact" class="col-sm-3" style="font-size:large;">Contact Email</label>
+              <input type="email" name="contact" id="contact" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter an email (required)" value={{contact}}>
+            </div>
+            <div class="input-group mb-3 row">
+              <label for="url" class="col-sm-3" style="font-size:large;">Application Link</label>
+              <input type="url" name="url" id="url" class="form-control col-sm-9 ml-2 rounded"
+                placeholder="Enter an job application link" value={{url}}>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" id="postjob" class="btn btn-lg btn-info mb-3 mt-3 post-job">Submit</button>
+              <button class="btn btn-lg btn-info mb-3 mt-3" tabindex="0" type="button"><span class="MuiButton-label"
+                  onClick="location.href='/user'">Back</span><span class="MuiTouchRipple-root"></span></button>
+
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</section>
+
+<script src="/js/postjob.js"></script>

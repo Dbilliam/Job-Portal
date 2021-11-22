@@ -1,0 +1,13 @@
+<span class="navbar-brand mb-0 h2 text-white logo">Assam Job Portal</span>
+<div class="container mb-3">
+  <div class="row mr-2 ml-2" id="jobs">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-lg-8">
+      {{!-- Job list will go here --}}
+      {{#each job}}
+      {{>jobsfinder}}
+      {{/each}}
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
